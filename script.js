@@ -1,10 +1,10 @@
-let body = document.querySelector("body");
+let container = document.querySelector("container");
 let div = document.createElement("div");
 div.className = "boxes";
 
 function makeGrid() {
    for (let i = 0; i < 256; i++) {
-      body.append(div.cloneNode(true))
+      container.append(div.cloneNode(true))
    }
 }
 
