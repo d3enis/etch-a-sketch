@@ -33,18 +33,19 @@ coloring();
 
 //Deleting grid & entering new value
 function clearMakeGrid() {
-  boxes.forEach((box) => {
-    box.parentNode.removeChild(box);
-  });
-
   selection = prompt("Enter your grid size", 32);
-  if (selection > 100 || selection < 1) {
-    selection = 16;
-    alert("Enter number beetwen 1 and 100");
-  }
-  makeGrid();
-  coloring();
-}
 
+  if (selection > 100 || selection < 1) {
+    alert("Enter number beetwen 1 and 100");
+  } else {
+    boxes.forEach((box) => {
+      box.parentNode.removeChild(box);
+    });
+
+    makeGrid();
+    coloring();
+  }
+}
+//Clear button (calling function)
 let clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", clearMakeGrid);

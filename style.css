@@ -4,10 +4,10 @@ html {
 
 container {
   display: grid;
-  justify-self: center;
-  align-self: center;
   height: 500px;
   width: 500px;
+  margin: 0 auto;
+  padding: 150px;
 }
 
 .boxes {
@@ -18,12 +18,20 @@ container {
 
 .clear {
   position: absolute;
-  top: 1%;
-  left: 40%;
+  top: 10%;
+  left: 880px;
   height: 50px;
   width: 100px;
+  margin: -20px;
   border: 2px gray solid;
   color: rgb(39, 35, 35);
   font-weight: 600;
   font-size: 20px;
+}
+
+@media screen and (max-width:1300px) {
+  container {
+    height: 300px;
+    width: 300px;
+  }
 }
